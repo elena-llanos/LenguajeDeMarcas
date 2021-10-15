@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<!-- esto lo hemos sacado de https://www.w3.org/wiki/Choosing_the_right_doctype_for_your_HTML_documents 
+ https://www.w3.org/QA/2002/04/valid-dtd-list.html -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Listas en HTML</title>
+<!--Aquí empieza la sección head, que incluye información para el navegadorpor ejemplo; el título de la ventana -->
+</head>
+<body>
+
+<h1>Listas en HTML</h1>
+<p>En HTML tenemos tres tipos de listas</p>
+<h2>Listas no ordenadas</h2>
+<p>Las listas no ordenadas las realizaremos con la etiqueta <code> &lt;ol&gt; </code></p>
+<p>ul &rarr; unordered list</p>
+<p>li &rarr;list items</p>
+<ul type="disc"> <!-- "square" "circ" "disc"-->
+<li>Primer elemento</li>
+<li>Segundo</li>
+<li>Tercero</li>
+</ul>
+<p>No es recomendable pero podemos usar el atributo type, para eso está el CSS para cambiar el formato</p>
+<pre>
+<code>
+&lt;ul type=&quot;disc&quot;&gt; &lt;!-- &quot;square&quot; &quot;circ&quot; &quot;disc&quot;--&gt;
+&lt;li&gt;Primer elemento&lt;/li&gt;
+&lt;li&gt;Segundo&lt;/li&gt;
+&lt;li&gt;Tercero&lt;/li&gt;
+&lt;/ul&gt;
+
+</code>
+</pre>
+<h2>Listas ordenadas</h2>
+<p>son las que en vez de un smbolo tienen a la izquierda de cada item un númeroo similar.Las construimos con &lt;ol&gt;&lt;/ol&gt;</p>
+<ol type ="A" start ="3"><!-- Atributos de <ol> reversed, cambia el orden; type; cambia los números por letras  puede ser "1! "I" "i" "A" "a"; start = numero --> <!--Antes los atributos tenían que tener valor, si no el navegador no lo abría, ahora con el html 5 no pasa, solo pasa en XML-->
+ reversed, pone los números en orden inverso
+ <!-- Atributo de <li>; value = "numero" -->
+<li>El uno</li>
+<li>El dos</li>
+<li value = "15">El tres</li>
+<li>El cuatro</li>
+</ol>
+<h2>Listas anidadas</h2><!-- dentro de un ul no puede haber otro ul, tiene que haber otro li-->
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea
+        <ul>
+          <li>China</li>
+          <li>Africa</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+<P>Date cuenta de que la segunda lista en un elemnto &lt;li&gt;</p>
+<pre>
+<code>
+&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea
+    &lt;ul&gt;
+      &lt;li&gt;Black tea&lt;/li&gt;
+      &lt;li&gt;Green tea
+        &lt;ul&gt;
+          &lt;li&gt;China&lt;/li&gt;
+          &lt;li&gt;Africa&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+
+</pre>
+
+
+
+</code>
+<h2>Lista de definiciones</h2>
+<p>Son las adecuadas para definir términos</p>
+<p>dl &rarr; definition list</p>
+<p>dt &rarr; definition list term</p>
+<p>dd &rarr; definition list definition</p>
+<dl>
+<dt>HTML</dt>
+<dd>Hypert Text Markup Language, es el lenguaje de estructura para docimentos web</dd>
+<dt>CSS</dt>
+<dd>Cascade Style Sheet, es el lenguaje que da estilo a las páginas web</dd>
+<dt>Javascript</dt>
+<dd>Lenguaje de programación que da funcionalidad a las páginas web</dd>
+</dl>
+</body>
+</html>
