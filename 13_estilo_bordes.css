@@ -1,0 +1,123 @@
+/************************************************************************* 
+  REGLAS DE ESTILO PARA BORDES
+**************************************************************************/
+
+/* Empiezo por el caso más fácil, que es el que pone los cuatro bordes
+   posibles iguales en cuanto a grosor, estilo y color */
+
+/*************************************************************************
+   CUATRO BORDES IGUALES
+**************************************************************************/
+
+h1 {
+  border: 2px solid black; /* grosor estilo color */
+}
+
+/* 
+Se escriben en orden el grosor, el estilo y el color 
+
+Como grosor se puede meter un valor numérico o uno de estos tres:
+    thin
+    medium
+    thick
+    
+Los posibles estilos son: 
+    hidden->oculto
+    solid->nomal, una línea
+    dotted->puntitos
+    dashed->rayitas
+    double
+    groove->hendido
+    ridge->relieve
+    inset->empotrado
+    outset->resaltado
+
+*/ 
+
+/*************************************************************************
+   BORDES DISTINTOS USANDO PROPIEDADES
+**************************************************************************/
+
+/* Podemos tomar una de las propiedades y definirla para los cuatro bordes
+   a la vez. El orden siempre es el mismo. Se empieza por arriba y se sigue 
+   el sentido de las agujas del reloj:
+   
+   ARRIBA DERECHA ABAJO IZQUIERDA
+
+*/
+
+h2{
+	  border-width: thin medium thick thin;
+	  border-color: black red green navy;
+	  border-style: solid dotted dashed double;
+}
+
+/*
+
+    Realmente estamos usando abreviaturas. 
+	
+	Por ejemplo 'border-width permite dar valores (en este orden) a 
+	border-top-width, border-right-width, border-bottom-width y 
+	border-left-width.
+    
+	Insisto: Los cuatro valores se interpretan siempre de la misma forma:
+
+    ARRIBA DERECHA ABAJO IZQUIERDA
+	
+    Si solo le damos un valor, hace los cuatro bordes iguales.
+    Si le damos dos o tres, al teminar vuelve a empezar a leer la lista.
+	Esto es útil si queremos los bordes horizontales de un tipo y los 
+	verticales de otro
+    
+*/
+
+h1{
+	border-color:navy;
+	border-style:solid hidden;
+	border-width:2px;
+}
+
+/*************************************************************************
+   BORDES DISTINTOS USANDO CADA LADO
+**************************************************************************/
+h3 {
+  border-top: 2px solid black;
+}
+/*
+Resumiendo: Tenemos las siguientes posibilidades:
+
+CUATRO BORDES IGUALES:
+
+border: grosor estilo color
+
+FIJAR A LA VEZ CADA PROPIEDAD EN LOS CUATRO BORDES
+
+		|style: entre uno y cuatro estilos;
+border-	|color: entre uno y cuatro colores;
+    	|width: entre uno y cuatro grosores;   
+
+FIJAR A LA VEZ TODAS LAS PROPIEDADES EN CADA UNO DE LOS CUATRO BORDES
+
+		|top: grosor estilo color
+border-	|right: grosor estilo color
+		|bottom: grosor estilo color
+		|left: grosor estilo color
+
+FIJAR CADA PROPIEDAD EN CADA UNO DE LOS CUATRO BORDES
+
+		|top	|
+border-	|right	|-|style:
+		|bottom	|-|color:
+		|left	|-|width:
+
+*/
+/**********************************************************
+BORDES REDONDEADOS
+**********************************************************/
+/*
+Para que una caja muestre un borde redondeado usaremos border-radius y normalmente una longitud en pixels
+*/
+p{
+	border: 1px solid red;
+	border-radius:20px;
+}
