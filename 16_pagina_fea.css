@@ -1,0 +1,60 @@
+
+/*
+IDENTIFICADORES Y CLASES
+
+Si en una pÃ¡gina hay algÃºn elemento que va a ser el Ãºnico de su tipo,podemos seÃ±alarlo con un identificador en el atributo id.
+
+Supongamos una pÃ¡gina web dividida en zonas.
+Es bastante normal que haya una cabecera, una zona de contenido y un pie.
+Lo normal es que les asociemos identificadores: porque no deberÃ­a haber mÃ¡s de uno de cada.
+
+En una cabecera suele ir el tÃ­tulo del sitio y a lo mejor de la pÃ¡gina, un logo.....
+
+En un pie suele haber informaciÃ³n de contacto, enlaces a otras partes de la empresa, o a ortos sitios de la misma empresa
+
+En el contenido va lo que seria el propio cuerpo de la noticia
+
+Muchas veces hay otra caja que es la de navegaciÃ³n 
+<div id="navegacion"></div>
+
+Durante mucho tiempo, los buscadores lo han tenido complicado porque tenÃ­an que andar "adivinando" el papel de cada caja. Hoy en dÃ­a, en HTML5, tenemos algunas etiquetas para eso:
+
+<div id="cabecera"> ............ <header>
+<div id="pie"> ................. <footer>
+<div id="contenido">............ <main>
+<div id="navegacion">........... <nav>
+<div id= "derecha" >............<aside>
+
+Hay otras dos llamadas <section> y <article>
+*/
+
+
+body{
+  font-family: Arial, Helvetica,sans-serif;
+  width : 80%;
+  margin: 0 auto;
+  background-color: navy;
+  color: yellow;
+  
+}
+/* este elemento quiere decir: elemento con id cabecera*/
+#cabecera{
+  background-color : red;
+  color: white;
+}
+/* este selector quiere decir: div con id cabecera || no puede haber espacio entre el # y el div, osea: div# si---- div # no--- . las propiedades de cabecera las pongo en el hash cabecera, al haber dos reglas para la misma cosa v a ejecutra la más 
+específica*/
+div#cabecera{
+	padding : 1em;
+	border-radius: 20px;
+}
+/* con esto centramos lo que está en h1 y h2*/
+div#cabecera h1, div#cabecera h2 {
+	text-align: center;
+}
+#pie{
+	margin : 0 -10%;
+  background-color: #deecec;
+  color : black;
+  padding: 
+}

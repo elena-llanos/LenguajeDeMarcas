@@ -1,0 +1,61 @@
+div{
+	width:40em;
+	height:6em;
+	border:1px solid black;
+	margin:1em auto;
+}
+
+#caja1{
+	background-image: linear-gradient(purple, gold);
+}
+
+#caja2{
+	background-image:linear-gradient(90deg, purple, gold);
+}
+
+#caja3{
+	background-image:linear-gradient(to left, purple, gold);
+}
+
+#caja4{
+	background-image:linear-gradient(-135deg,purple, gold, navy);
+}
+
+#caja5{
+	background-image: linear-gradient(to bottom left, purple, gold, navy);
+}
+
+#caja6{
+	/* background-image: linear-gradient( to right, rgba(200,200,200,1), rgba(200,200,200,0) );*/
+	background-image: linear-gradient( to right, #DDDDDDFF, #DDDDDD00 );
+}
+
+#caja7{
+	background-image: radial-gradient(50px, purple, gold);
+}
+
+#caja8{
+	background-image: radial-gradient(50px 100px, purple, gold);
+}
+
+#caja9{
+	background-image: radial-gradient(50% 25%, purple, gold);
+}
+
+/*
+radial-gradient(at bottom left, purple, gold);
+radial-gradient(at center right, purple, gold);
+radial-gradient(at 30px 30px, purple, gold);
+radial-gradient(at 25% 66%, purple, gold);
+radial-gradient(at 30px 66%, purple, gold);
+
+radial-gradient(30px at bottom left, purple, gold);
+radial-gradient(30px 15px at center right, purple, gold);
+radial-gradient(50% 15% at 30px 30px, purple, gold);
+radial-gradient(farthest-side at 25% 66%, purple, gold);
+radial-gradient(farthest-corner at 30px 66%, purple, gold);
+
+radial-gradient(100px circle at center, purple 0%, green, gold 100%);
+
+radial-gradient(50px circle at center, purple, green, gold 80px)
+*/
