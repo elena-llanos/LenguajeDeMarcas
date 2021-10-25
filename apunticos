@@ -1,0 +1,19 @@
+
+ETIQUETAS
+<div></div> Es una caja. No tiene significado de por si, es un elemento de bloque. Son para definir cajas que para mi tienen signficdao pero que en html 5...
+
+< div id ="Cabecera"> = <header>
+<span></span> No quiere decir nada, es un elemento de línea. 
+
+ATRIBUTO
+id = es único en el documento
+class = identifica un tipo de modo
+
+max width y min width
+
+
+selectores son quienes van a recibir las propiedades
+# / *
+Para que una misma cadena de letra  o numero ocupe lo mismo sin ser del mismo tamaño cada carcter, = monsopace
+
+https://www.smashingmagazine.com/2008/08/top-10-css-table-designs/

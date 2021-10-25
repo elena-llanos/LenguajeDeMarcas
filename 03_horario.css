@@ -1,29 +1,58 @@
- *{background-color:white
- }
+h1{
+	text-align: center
+}
  body{
-	 font-family:arial
+	 font-family:arial;
+	 margin-left: 30%;
+	 margin-right:30%;
+	 
 	 
 	
  }
- #entorno{
-	 background-color: rgb(255, 170, 170)
+ .entorno{
+	 background-color: rgb(255, 170, 170);
+	  text-align: center;
  }
- #program{
-	 background-color: rgb(212, 106, 106)
+ .program{
+	 background-color: rgb(212, 106, 106);
+	  text-align: center;
  }
- #base{
-	 background-color:rgb(128, 21, 21)
+ .base{
+	 background-color:rgb(128, 21, 21);
+	 text-align: center;
  }
  #days{
-	 background-color: rgb(240, 187, 188)
+	 background-color: rgb(240, 187, 188);
+	 text-align: center;
+	 
+	
  }
- #sist{
-	 background-color:rgb(171, 86, 88)
+ .sist{
+	 background-color:rgb(171, 86, 88);
+	  text-align: center;
  }
- #rec{
-	 background-color:rgb(254, 245, 245)
+ .rec{
+	 background-color:rgb(254, 245, 245);
 	 text-align: center
  }
- #lengua{
-	 background-color:rgb(205, 133, 135)
+ .lengua{
+	 background-color:rgb(205, 133, 135);
+	  text-align: center;
  }
+ .fol{
+	 background-color:rgb(170, 57, 57);
+	 text-align: center;
+	 
+ }
+ .hours{
+	 background-color: rgb(240, 187, 188);
+	 width: 50%;
+	 text-align: left;
+	 
+	 
+ }
+ .eng{
+	 background-color: rgb(255, 233, 232);
+	 text-align: center;
+ }
+ 

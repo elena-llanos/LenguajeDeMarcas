@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<!--
+Hay cuatro etiquetas bÃ¡sicas para confeccionar tablas.
+
+table....................inicio y fin de table
+tr.......................inicio y fin de lÃ­nea (row)
+td.......................inicio y fin de celda de datos
+th.......................inicio y fin de celda de cabecera
+
+Hay otra etiqueta que conviene usar y que es caption. Debe ser la primera detrÃ¡s de table y actÃºa de tÃ­tulo de tabla
+
+caption......tÃ­tulo de tabla
+
+Hay otras tres que no son obligatorias pero que dependiendo de las situaciones pueden ser convenientes.
+
+	thead........Cabecera de tabla (contiene lÃ­neas)
+	tbody........Cuerpo de la tabla (datos)
+	tfoot........Totales o similares. Se suele poner detrÃ¡s de thead y el navegador nos la manda al final
+
+Hay dos atributos de table que ya NO SE USAN:
+
+*border........puede valer 0 o 1 y hace que se dibujen los bordes o no
+*summary.......No existe ya en HTML5 aunque sigue usÃ¡ndose. Indica de quÃ© va la tabla  
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablas en HTML</title>
+</head>
+<body>
+<h1>Tablas en HTML</h1>
+<h2>Tabla sencilla</h2>
+<table border="1" summary="Matriculados en Grado Superior en FP en Bizkaia">
+<caption>Matriculados en Grado Superior en FP en Bizkaia</caption>
+	<tr>
+		<th>Familia Profesional</th>
+		<th>Hombres</th>
+		<th>Mujeres</th>
+	</tr>
+	<tr>
+		<td>InformÃ¡tica y comunicaciones</td>
+		<td>831</td>
+		<td>129</td>
+	</tr>
+	<tr>
+		<td>QuÃ­mica</td>
+		<td>120</td>
+		<td>182</td>
+	</tr>
+</table>
+
+	<h2>Celdas de varias filas y columnas</h2>
+	<!--
+	Podemos usar colspan y rowspan para que las celdas ocupen mÃ¡s de una fila o mÃ¡s de una columna 
+	-->
+	<table border="1" style="width:100%;">
+	<tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+	<tr><td>1</td><td colspan="2">2</td><td>3</td></tr>
+	<tr><td colspan="4">RECREO</td></tr>
+	<tr><td>1</td><td rowspan="2">2</td><td>3</td><td>4</td></tr>
+	<tr><td>1</td><td>2</td></tr>
+	</table>
+	<h2>Tabla dividida en tres zonas</h2>
+	<table border="1">
+		<thead>
+			<tr><th colspan="5">Ganancias de 2017</th></tr>
+			<tr>
+				<th></th>
+				<th>Enero - Marzo</th>
+				<th> Abril -Junio</th>
+				<th>Julio - Octubre</th>
+				<th>Noviembre - Diciembre</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>Total</td>
+				<td>30.000</td>
+				<td>75.000</td>
+				<td>60.000</td>
+				<td>66.000</td>
+			</tr>		
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Bizkaia</td>
+				<td>10.000</td>
+				<td>25.000</td>
+				<td>20.000</td>
+				<td>22.000</td>
+			</tr>
+			<tr>
+				<td>Gipuzkoa</td>
+				<td>10.000</td>
+				<td>25.000</td>
+				<td>20.000</td>
+				<td>22.000</td>
+			</tr>
+			<tr>
+				<td>Ãlava</td>
+				<td>10.000</td>
+				<td>25.000</td>
+				<td>20.000</td>
+				<td>22.000</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
