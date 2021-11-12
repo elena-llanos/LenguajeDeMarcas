@@ -1,0 +1,20 @@
+48 Bizkaia;1159443
+
+<tr><td>Bizkaia</td><td>1159443</td></tr>
+
+Buscar: (.*);(.*)
+Reemplazar: <tr><td>\1</td><td>\2</td></tr>
+
+HUB = concentrado, cacharro para enlazar cosas, cables
+GIT = Sistema de control de versiones : Cambios grandes>>>> nueva versión: cambios pequeños>>>> modificaciones a la versión
+CDN = Content Delivery Network
+
+series.data.setAll([
+  { value: 10, category: "One" },
+  { value: 9, category: "Two" },
+  { value: 6, category: "Three" },
+  { value: 5, category: "Four" },
+  { value: 4, category: "Five" },
+  { value: 3, category: "Six" },
+  { value: 1, category: "Seven" },
+]); esto es un JSON

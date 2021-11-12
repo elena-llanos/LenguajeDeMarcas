@@ -1,0 +1,73 @@
+Transformando datos mediante expresiones regulares.
+Tabla a partir de datos del Eustat
+
+A veces necesitamos obtener datos para incluir en una página web. Una de las posibles formas de obtenerlos es recurrir a los diversos organismos públicos de estadística.
+
+En nuestro caso, podrían ser interesantes el eustat, el ine y el eurostat
+
+Vamos a ver un ejemplo de cómo se puede sacar partido a los datos para generar gráficos, tablas …
+
+Entra en el eustat y pulsa en el menú de la izquierda Sociedad, luego Educacióny después Alumnado, profesorado y centros
+
+Llegas a una serie de tablas. Nos interesa Alumnado de formación profesional en la C.A. de Euskadi por grado, familia, territorio histórico y sexo. 2012/13
+
+Haciendo click en el nombre de la tabla, llegas a ver los datos en una página web pero es más interesante bajarse los datos en alguno de los dos formatos propuesto por los iconos que aparecen a la derecha del nombre: microsoft excel o csv
+
+Bájate los datos en formato csv, comma-separated values, es decir, valores separados por comas. El nombre puede ser un poco engañoso, porque se usa también para archivos separados por tabuladores, punto y coma …. Puedes cambiar el nombre de fichero a fp.csv
+
+Arrastra el fichero al Notepad ++ para examinarlo. Verás que realmente está usando como separador el caracter ";" Si te fijas en la barra de estado verás que el conjunto de caracteres es ANSI. Este fichero se abrirá bien con excel pero si el separador fuese otro o si el conjunto de caracteres fuese otro, tendríamos problemas. Vamos a abrirlo con el LibreOffice, que es más flexible.
+
+Abre el calc y arrastra tu fichero a él. Verás que muestra un cuadro de diálogo para que le puedas indicar el tipo de fichero que tienes
+
+En la codificación deberás elegir Europa Occidental (ISO-8859-1) En la parte inferior ves cómo va a quedar el fichero. Si se ven bien los acentos, tenemos la codificación correcta.
+
+No modifiques el idioma
+
+Si no te interesa todo el fichero, puedes tomarlo a partir de determinada línea.
+
+En las opciones de separador, marca ";" pero no marques los demás. Por hacer la prueba, baja hasta la fila 14 y marca también como separador la coma. Verás que comunicación, imagen y sonido se parte en dos celdas por la coma. No queremos que se separe así, ¿no?. Desmarca la coma y volverá a estar bien. Pulsa Aceptar y el fichero se abrirá correctamente
+
+Vamos a suponer que sólo nos interesan los datos de ciclo superior en Bizkaia. Si has seguido las instrucciones, ahora mismo tienes el fichero abierto tanto en calc como en notepad++. En el calc elimina las columnasas que no te interesan: si el fichero es el mismo que al escribir este documento, de la B a la G y después de la E a la G. Es importante que las elimines, no que borres su contenido, si no, te aparecerán campos vacíos y en el csv tendrás separadores para definirlos. Guarda el fichero desde el calc (de nuevo en formato csv) y vete al notepad++. Te avisa de que han modificado el fichero desde otra aplicación y se ofrece a recargarlo. Acepta
+
+Recuerda que sólo queremos los datos de ciclo superior. Elimina las filas de la 1 a la 31 y luego a partir de la 25
+
+Ya tenemos preparados los datos que necesitamos. Guarda desde el calc y vuelve al notepad++ a recargar el fichero. Puedes cerrar el calc
+
+Para manipular estos datos se pone (.*) una vez por cada campo con el separador adecuado. Por ejemplo, supongamos que queremos crear una tabla HTML con esos datos. Queremos convertir
+
+Actividades agrarias / Agraria;71;63;8 en
+
+<tr><td>Actividades agrarias / Agraria</td><td>71</td><td>63</td><td>8</td></tr>
+
+En el menú del notepad++ elige buscar reemplazar (o pulsa Ctrl+H)
+
+En los botones de radio de abajo, marca Expresión Regular
+
+Pon en la caja Buscar (.*);(.*);(.*);(.*) porque tenemos cuatro campos
+
+En la caja Reemplazar, pondremos \1 para referirnos al primer campo,\2 para el segundo, y así sucesivamente.
+
+Escribe <tr><td>\1</td><td>\2</td><td>\3</td><td>\4</td></tr>
+
+Pulsando en Reemplazar todo, tenemos la tabla casi terminada.
+
+Se podría argumentar que está muy feo todo en la misma línea. Podemos usar \n para cambiar de línea y \t para el tabulador
+
+Pulsa Ctrl-Z para deshacer la transformación y volver al csv. Ahora pon en la caja de búsqueda de nuevo (.*);(.*);(.*);(.*) y en la de reemplazo <tr>\n\t<td>\1</td>\n\t<td>\2</td>\n\t<td>\3</td>\n\t<td>\4</td>\n</tr>
+Gráfico a partir de datos del INE
+
+Entra en el INE y en el menú de la izquierda elige Demografía y población, Padrón. Población por municipios Hay un item llamado Cifras Oficiales de Población de los Municipios Españoles: Revisión del Padrón Municipal. A su derecha tienes dos enlaces. Haz click en Información detallada .
+
+La primera tabla es la de Resumen por comunidades autónomas.. Llegas a un interfaz típico de esta página. Puedes seleccionar y deseleccionar con Ctrl+Click o Shift+Click. Marca todas las comunidades (sin el total), en la segunda sólo el total y en la tercera el último año disponible. Cuando lo tengas, pulsa Consultar Selección. Te muestra la tabla de datos y un botón de descarga. Púlsalo y bájate los datos en csv separado por ;
+
+El INE trabaja en UTF-8. Si abres el fichero con excel se verán mal los acentos. LibreOffice lo abrirá bien porque pregunta qué codificación quieres antes de abrirlo. Como son pocos datos, no necesitamos la hoja de cálculo para nada. Ábrelo con notepad y asegúrate de tenerlo en la codificación adecuada
+
+El primer paso es borrar las primeras y últimas líneas, que no son datos.
+
+Para manejar éstos datos, no nos interesa que los números aparezcan con el punto, las personas son números enteros. Toma en el menú Buscar ➞ Reemplazar. Busca .0; y reemplaza por nada. Asegúrate de tener "Normal" seleccionado en el modo de búsqueda. Si tienes seleccionado "Expresión Regular" te vas a llevar un susto, porque el punto es el comodín y te va a borrar cualquier caracter seguido de un cero.
+
+Para eliminar el código de la comunidad. Busca como expresión regular ^[ 0-9]* y lo sustituyes por nada. Ahora no importa que no lo entiendas bien, veremos expresiones regulares cuand veamos validación de formularios.
+
+Ahora, queremos generar un JSON para usar con la librería javascript amCharts. El objetivo es cambiar cada línea del tipo Andalucía;8388107 por algo parecido a {"comunidad":"Andalucía","habitantes":8388107}
+
+De nuevo como expresión regular, busca (.*);(.*) y sustitúyelo por {"comunidad":"\1","habitantes":\2}. Ahora solo te queda adaptar el ejemplo que hayas elegido en la librería para obtener el gráfico.

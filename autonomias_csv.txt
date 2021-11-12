@@ -1,0 +1,85 @@
+
+{
+	region:"Andalucía",
+	habitantes:8464411,
+},
+
+Buscar: (.*);(.*);(.*);(.*);(.*);(.*)
+Reemplazar: {\n\tregion:"\1",\n\thabitantes:\2\n,\thombres:\3\n,\tmujeres:\4\n},
+
+[{
+	region:"Andalucía",
+	habitantes:8464411
+},
+{
+	region:"Aragón",
+	habitantes:1329391
+},
+{
+	region:"Asturias, Principado de",
+	habitantes:1018784
+},
+{
+	region:"Balears, Illes",
+	habitantes:1171543
+},
+{
+	region:"Canarias",
+	habitantes:2175952
+},
+{
+	region:"Cantabria",
+	habitantes:582905
+},
+{
+	region:"Castilla y León",
+	habitantes:2394918
+},
+{
+	region:"Castilla - La Mancha",
+	habitantes:2045221
+},
+{
+	region:"Cataluña",
+	habitantes:7780479
+},
+{
+	region:"Comunitat Valenciana",
+	habitantes:5057353
+},
+{
+	region:"Extremadura",
+	habitantes:1063987
+},
+{
+	region:"Galicia",
+	habitantes:2701819
+},
+{
+	region:"Madrid, Comunidad de",
+	habitantes:6779888
+},
+{
+	region:"Murcia, Región de",
+	habitantes:1511251
+},
+{
+	region:"Navarra, Comunidad Foral de",
+	habitantes:661197
+},
+{
+	region:"País Vasco",
+	habitantes:2220504
+},
+{
+	region:"Rioja, La",
+	habitantes:319914
+},
+{
+	region:"Ceuta",
+	habitantes:84202
+},
+{
+	region:"Melilla",
+	habitantes:87076
+}]

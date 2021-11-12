@@ -1,0 +1,12 @@
+<tr><td>;83</td><td>32</td><td>51</td><td></td></tr>
+
+<tr>
+	<td>Artes gráficas</td>
+	<td>83</td>
+	<td>32</td>
+	<td>51</td>
+</tr>
+
+<tr><td>Buscar (.*);(.*);(.*);(.*)
+
+Reemplazar  <tr>\n\t<td>\1</td>\n\t<td>\2</td>\n\t<td>\3</td>\n\t<td>\4</td>\n\t</tr>
