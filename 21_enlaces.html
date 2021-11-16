@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<!--
+Datos interesantes:
+ 1.-El separador de caminos "bueno" es es slash / y no el backslash \ que sÃ³lo
+ funciona en windows.
+ 2.-A pesar de que los standards han cambiado y permiten en las URLs cualquier carÃ¡cter, lo razonable es usar sÃ³lo caracteres ASCII y que en los nombres de fichero no aparezcan 
+espacios. Si tiene varias palabras puedes separarlas con guiones bajos o guiones medios. Por ejemplo, una foto que se boda-de-pepe.jpg
+ 3.-Ojo con las mayÃºsculas y minÃºsculas. En windows el enlace funcionarÃ¡ porque no las distingue, pero en linux, no.
+ 4.-Si ves que por ejemplo no se te cargan las imÃ¡genes en el servidor pero sÃ­ en local, comprueba las extensiones. Algunas aplicaciones windows de retoque de imÃ¡genes ponen la 
+extensiÃ³n en mayÃºsculas. Se vÃ© en la ventana del cliente FTP
+ 5.-A la hora de definir un camino relativo, ../ significa "subir un piso"
+ 
+ ATRIBUTOS
+ href...................direcciÃ³n a la que lleva el link
+ hreflang...............idioma del documento al que llega
+ rel....................relaciÃ³n entre el documento enlazado y el que lo enlaza
+ target.................indica dÃ³nde se debe abrir el documento
+                        _blank ......Se abre en otra ventana
+						_self........Se abre en la propia ventana del documento
+						_parent......En la ventana padre
+						_top.........En la ventana de mÃ¡s alto nivel
+ NUEVOS EN HTML5
+ download...............en vez de llevarte al documento lo descarga						
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enlaces en HTML</title>
+</head>
+<body>
+<h1>Lorem Ipsum</h1>
+<p>En una tabla de contenido (TOC) enlazamos normalmente tÃ­tulos h2 o h3 a los que hemos puesto un id</p>
+<p>Técnicamente esto no son elaces sino anclas (anchor) porque van a partes de la misma página. El atributo href va precedido de #</p>
+<p>Para volver a inicio tenemos la etiqueta vacÃ­a (#). Otra posibilidad es poner en la propia lista id="TOC"</p>
+<p>Algunos ejemplos de enlaces externos: <a href="https://www.google.es/">google</a>, <a href="https://elorrieta.hezkuntza.net/es/inicio">Elorrieta</a></p>
+<p>Enlaces dentro del mismo servidor</p>
+<!--
+Enlace con camino absoluto NO HACER
+-->
+<p>En el servidor tenemos un fichero llamado <a href="http://10.0.56.5/~juanjo/00_primero/12_colores.html">colores</a>. EL nombre del fichero es <a 
+href="12_colores.html">12_colores.html</a></p>
+<p>Para subir un piso en las carpetas usamos .. </p>
+<p>También tenemos un <a href="../descargas/calendario_para_primero.phpo">calendario</a></p>
+<p>Tenemos una <a href="chuletas/davechild_css2.pdf">chuleta de css</a>. Si quieres, descárgate <a href="chuletas/css3-cheat-sheet_smashingmagazine.pdf"download>esta otra</a></p>
+<ol>
+<li><a href="#capitulo1">Maecenas vitae</a></li>
+<li><a href="#capitulo2">Cras efficitur neque sed consectetur</a></li>
+<li><a href="#capitulo3">Pellentesque id eros euismod</a></li>
+</ol>
+<h2 id="capitulo1">Maecenas vitae <a href="#">Subir</a></h2>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ipsum sit amet ex vehicula pellentesque a a sem. Nam quis scelerisque turpis, eget efficitur libero. Proin 
+nunc turpis, tincidunt ac tellus id, ornare egestas magna. Aenean ac finibus eros. Nunc elementum est in quam eleifend, nec ultrices purus dictum. In vitae lacus ut libero volutpat 
+elementum. Fusce eu enim non lectus consequat pharetra in commodo nunc. Praesent urna ligula, aliquam iaculis congue id, consectetur vitae nulla. Phasellus accumsan eros nec urna 
+egestas varius. Pellentesque sollicitudin sem a sagittis suscipit. Aliquam dui mauris, consectetur eget nunc eu, ullamcorper aliquet magna.
+</p>
+<p>
+Aenean eu tortor suscipit, malesuada neque nec, luctus lorem. Suspendisse venenatis finibus ligula. Nam quis egestas elit. Curabitur semper interdum arcu, molestie lacinia turpis 
+rhoncus vel. Ut a mi a odio imperdiet maximus. Duis at enim libero. Suspendisse laoreet risus quis venenatis molestie. Nunc luctus bibendum urna quis aliquet. Etiam quis massa 
+urna. Aenean volutpat laoreet lorem vehicula vestibulum.
+</p>
+<h2  id="capitulo2">Cras efficitur neque sed consectetur <a href="#">Subir</a></h2>
+<p>
+Cras efficitur neque sed consectetur elementum. Nunc suscipit aliquet libero at lobortis. Phasellus eleifend luctus tortor quis dapibus. Donec pharetra at turpis et scelerisque. In 
+blandit efficitur dolor, quis finibus nulla lobortis vel. Quisque in vehicula sem. Nunc et laoreet arcu. Nulla ut leo posuere, varius quam porttitor, aliquet tellus. In vel 
+eleifend dui. Nam id dolor neque.
+</p>
+<p>
+Nam pellentesque nibh ac rutrum elementum. Nam lorem massa, efficitur sit amet ultrices eu, tincidunt eu tortor. Vestibulum tincidunt ornare consectetur. Morbi interdum nunc ac 
+maximus hendrerit. Sed commodo massa at odio suscipit venenatis. Sed egestas, dui at sollicitudin congue, odio nisl molestie sem, vel hendrerit nunc neque ut mi. Quisque sodales 
+diam ut nulla aliquam, vel maximus mauris rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur efficitur eget tortor eu 
+convallis. Donec vestibulum dui ac tempor mollis. Praesent facilisis rhoncus mauris rutrum maximus. Etiam eleifend volutpat felis, eu ullamcorper odio aliquet nec. Curabitur 
+rhoncus massa a ante sagittis, sit amet dictum ex vehicula.
+</p>
+<p>
+Aenean at sapien urna. Morbi ut lacus erat. Nulla facilisi. Donec vestibulum quis mauris sed vehicula. Donec varius nisi sit amet risus cursus, vitae aliquet enim eleifend. Vivamus 
+finibus dapibus nisl lobortis pharetra. Nulla eleifend eget ligula quis scelerisque. Sed convallis placerat leo sed pretium. Mauris at est hendrerit, rhoncus metus eu, consectetur 
+felis.
+</p>
+<h2  id="capitulo3">Pellentesque id eros euismod <a href="#">Subir</a></h2>
+<p>
+Pellentesque id eros euismod, ultrices justo ut, dictum mi. Aliquam diam mi, efficitur quis metus vel, feugiat mattis nisl. Mauris nec turpis vel enim volutpat efficitur non sed 
+erat. Morbi vel metus feugiat, luctus mauris eu, ullamcorper neque. Nam libero ex, luctus euismod malesuada vel, laoreet sit amet mauris. Aliquam ut odio ac est dictum eleifend a 
+id sapien. Vivamus vitae lorem dignissim, pellentesque elit vel, scelerisque libero. Donec tristique turpis et odio pretium, eget consequat mi convallis. Ut luctus, justo vulputate 
+volutpat egestas, purus elit fermentum enim, id vestibulum neque orci sit amet erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+Maecenas id auctor velit. Pellentesque efficitur augue porttitor dolor pretium aliquam. Nunc sed porta sem. Phasellus ante leo, porta vitae tincidunt in, efficitur dignissim sem. 
+In sed laoreet nisi.
+</p>
+<p>
+Proin finibus odio non leo convallis, vitae molestie ipsum rhoncus. Donec et tellus non nisl rhoncus luctus. Duis convallis, ipsum non feugiat consectetur, magna lacus vehicula 
+risus, quis auctor purus elit in nisi. Donec eget lobortis est. Nulla vel efficitur velit. Ut semper massa a lacus pharetra, eget vulputate mauris accumsan. Cras ut interdum erat.
+</p>
+<p>
+Cras vestibulum accumsan ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi sagittis at mauris ut tempus. Pellentesque 
+interdum tellus quis odio placerat, non dignissim orci laoreet. Pellentesque id imperdiet est. Praesent id elit dapibus libero tincidunt vehicula ac at leo. Cras nec vehicula 
+sapien. Aenean non tincidunt nulla. Suspendisse in dapibus ligula. Maecenas ac vulputate nisi, a convallis arcu. Aliquam pellentesque tellus sed turpis iaculis cursus. Nullam at 
+pulvinar massa, sit amet hendrerit nulla. Praesent nisl leo, lacinia eget neque sit amet, condimentum pretium quam. Vestibulum rutrum sed diam et gravida. Aliquam maximus finibus 
+orci, sed ultricies eros condimentum eu. In et nisl ut turpis elementum blandit.
+</p>
+<p>
+Morbi egestas augue mauris, luctus eleifend mi auctor eleifend. Cras mi ipsum, finibus a malesuada ac, placerat eu nibh. Pellentesque tincidunt aliquam augue. Proin elementum 
+commodo felis, quis commodo ante imperdiet eu. Duis sit amet tincidunt quam. Integer ac augue urna. Proin consequat ex eu velit congue, in dictum tortor vulputate. Praesent diam 
+dolor, condimentum eget aliquam nec, gravida at erat. Pellentesque tempor viverra risus, ut venenatis sem semper ac.
+</p>
+<p>
+Nam ac mattis turpis. Ut at pellentesque felis. Pellentesque pulvinar ex ut lectus bibendum, nec hendrerit ipsum finibus. Class aptent taciti sociosqu ad litora torquent per 
+conubia nostra, per inceptos himenaeos. Nulla elementum tortor nulla, vel volutpat erat pretium efficitur. Aliquam ornare molestie odio, vitae feugiat erat gravida ut. In dignissim 
+libero sed justo venenatis, eu luctus ipsum ullamcorper.
+</p>
+<p>
+Aliquam feugiat tellus accumsan vestibulum mollis. Donec molestie nec tortor ac elementum. Mauris pellentesque quam neque, non semper urna congue sed. Etiam mattis pretium nunc, et 
+interdum nunc sollicitudin ut. Sed pharetra finibus ante in gravida. Maecenas scelerisque sem purus, et porttitor ipsum consequat sit amet. Nullam gravida luctus varius. Phasellus 
+imperdiet ipsum in ante aliquet vestibulum. Proin sit amet odio non arcu pellentesque consequat at sed turpis. Praesent tristique lorem eget felis fringilla gravida. Morbi eleifend 
+libero at erat auctor elementum. Cras at arcu at justo dictum consectetur. Mauris aliquet, diam eu congue euismod, nisl justo vehicula nibh, quis cursus nulla arcu dictum velit. 
+Vestibulum vitae odio metus. Maecenas mattis lacus ut arcu porta efficitur. Nulla eget nulla lobortis, molestie augue scelerisque, accumsan lectus.
+</p>
+<p>
+Cras suscipit id eros non scelerisque. Curabitur quis fermentum purus. Mauris cursus mi vel porttitor vestibulum. Cras sit amet tellus nec nisl venenatis rutrum faucibus nec purus. 
+Morbi quis suscipit risus. Pellentesque eu metus luctus, imperdiet justo non, viverra erat. Etiam efficitur ipsum tincidunt, mattis enim eu, mattis massa. Vivamus pellentesque sit 
+amet sapien et elementum. Proin ullamcorper lacus et ipsum blandit rhoncus. Phasellus vehicula eros laoreet turpis faucibus, at condimentum est varius. Suspendisse commodo iaculis 
+gravida. Sed sed sagittis metus. Proin vehicula rhoncus quam, at ullamcorper mi fermentum in. Praesent ornare ipsum id lacus hendrerit, a tempus erat lobortis. Mauris in tempus est.
+</p>
+<p>
+Vivamus eu justo ipsum. Quisque feugiat venenatis sem, eget molestie neque imperdiet vel. Sed et sollicitudin lacus, vitae porttitor risus. Nulla facilisi. Duis sem arcu, aliquam 
+nec ex vel, hendrerit rutrum nisi. Maecenas semper lorem id dui porttitor, vel laoreet arcu egestas. Morbi vel libero justo.
+</p>
+<p>
+Integer lacinia lectus nec consequat sollicitudin. Morbi non accumsan elit. Nam vestibulum, augue in dignissim efficitur, velit libero gravida justo, eget commodo magna lectus ac 
+lorem. Vivamus vitae felis nec sem tincidunt feugiat. Donec neque elit, ornare vitae urna in, rutrum semper nisl. Cras id dictum metus. Maecenas varius lorem id sapien accumsan 
+pellentesque. Suspendisse finibus lectus at nisi dictum lobortis. Sed hendrerit suscipit vulputate. Aenean ut ex vel dui dapibus pretium. In laoreet ante elit, vel egestas neque 
+luctus eu. Sed in quam semper, pellentesque magna sed, porta diam. Etiam accumsan tincidunt mauris, in tincidunt enim efficitur a. Sed dignissim nulla sed diam malesuada, vitae 
+laoreet mauris blandit.
+</p>
+<p>
+Phasellus scelerisque tortor ex, quis placerat libero condimentum ut. Aliquam consectetur dolor sed magna tempus hendrerit. Sed quis leo a est aliquet feugiat vitae ut felis. 
+Maecenas semper sodales tortor et fringilla. Donec euismod vel augue et ultricies. Donec justo risus, efficitur nec augue quis, varius eleifend arcu. Vivamus ornare eu orci sit 
+amet commodo. Maecenas volutpat, libero eu accumsan pretium, justo metus pharetra felis, ut pellentesque nisi arcu eu eros. Nunc quis felis ut mi scelerisque semper. Aenean 
+vehicula eleifend fermentum. Suspendisse sed convallis dui, ac porttitor quam. Vestibulum quis pharetra est, vitae suscipit mi. Suspendisse interdum lacus id commodo sagittis. 
+Donec mi mauris, venenatis quis aliquet ac, euismod eget leo.
+</p>
+</body>
+</html>

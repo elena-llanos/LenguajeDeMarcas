@@ -17,3 +17,11 @@ selectores son quienes van a recibir las propiedades
 Para que una misma cadena de letra  o numero ocupe lo mismo sin ser del mismo tamaño cada carcter, = monsopace
 
 https://www.smashingmagazine.com/2008/08/top-10-css-table-designs/
+
+
+Una imagen en un ordenador es un mapa de bits. Hay que darle un tamaño. el tipo de fichero es bmp = mapa de bits/ bitmap
+En la cabecera decimos alto y ancho en bits 
+						la densidad de color
+JPG es una bmp comprimido 
+Gráficos en bmp y graficos vectoriales (SVG; scalable) el gráfico vectorial tiene mejro calidad y viene en lenguaje de amrcas hay una etiqueta <svg> podemos meter codigo en neutra web
+El svg lo podemos editar, porque son instruciones, su código es una instrucción
