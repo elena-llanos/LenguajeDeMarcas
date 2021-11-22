@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datos Euskera Castellano por provincias</title>
+<!-- amCharts javascript sources -->
+<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+
+
+
+</head>
+<body>
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "pie",
+					"balloonText": "[[title]]<br> style='font-size:14px'>[[value]] ([[percents]]%)",
+					"titleField": "region",
+					"valueField": "idioma",
+                    "valueField": "hombres",
+                    "valueField": "mujeres",
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"align": "center",
+						"markerType": "circle"
+					},
+					"titles": [],
+					"dataProvider": [
+                    {
+	"region":" M - Araba/Álava - Euskera",
+	"idioma":"Euskera",
+	"mujeres":4297,
+},
+{
+	"region":" H - Araba/Álava - Euskera",
+	"idioma":"Euskera",
+	"hombres":4871,
+	
+},
+{
+	"region":"H -Araba/Álava - Castellano",
+	"idioma":"Castellano",
+	"hombres":138134,
+	
+},
+{
+	"region":"M -Araba/Álava - Castellano",
+	"idioma":"Castellano",
+	"mujeres":140937,
+},
+{
+	"region":"H -Bizkaia - Euskera",
+	"idioma":"Euskera",
+	"hombres":48818,
+	
+},
+{
+	"region":"M -Bizkaia - Euskera",
+	"idioma":"Euskera",
+	"mujeres":53973,
+},
+{
+	"region":"H -Bizkaia - Castellano",
+	"idioma":"Castellano",
+	"hombres":438476,
+	
+},
+{
+	"region":"M -Bizkaia - Castellano",
+	"idioma":"Castellano",
+	"mujeres":471651,
+},
+{
+	"region":"H -Gipuzkoa - Euskera",
+	"idioma":"Euskera",
+	"hombres":95498,
+	
+},
+{
+	"region":"M -Gipuzkoa - Euskera",
+	"idioma":"Euskera",
+	"mujeres":100179,
+},
+{
+	"region":"H -Gipuzkoa - Castellano",
+	"idioma":"Castellano",
+	"hombres":192478,
+	
+},
+{
+	"region":"M -Gipuzkoa - Castellano",
+	"idioma":"Castellano",
+	"mujeres":201796,
+}
+
+
+					]
+				}
+			);
+		</script>
+<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+
+</body>
+</html>
